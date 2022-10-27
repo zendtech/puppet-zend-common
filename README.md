@@ -57,3 +57,7 @@ class { 'zend_common::license':
   source => 'puppet:///modules/<MODULE_NAME>/zend/license',
 }
 ```
+
+## Reference
+
+See [REFERENCE.md](./REFERENCE.md)
