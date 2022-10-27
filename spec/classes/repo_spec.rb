@@ -8,7 +8,7 @@ describe 'zend_common::repo' do
       let(:facts) { os_facts }
 
       describe 'works without params' do
-        it { is_expected.to compile.with_all_deps }
+        it { is_expected.to compile }
       end
     end
   end
