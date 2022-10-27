@@ -1,5 +1,24 @@
 # @summary Configure the ZendPHP package repositories depending on OS and version
 #
+# @example Without parameters
+#   include zend_common::repo
+#
+# @example With product other than ZendPHP
+#   class { 'zend_common::repo':
+#     product      => 'ZendHQ',
+#     support_urls => {
+#       supported_platforms => 'https://help.zend.com/zendphp/current/content/installation/zendhq_supported_platforms.htm',
+#     },
+#   }
+#
+# @example With credentials
+#   class { 'zend_common::repo':
+#     creds => {
+#       username => '<ZEND_USERNAME>',
+#       password => '<ZEND_PASSWORD>',
+#     }
+#   }
+#
 # @param [Enum['ZendPHP', 'ZendHQ']] product
 #   Name of the Zend product
 #
@@ -26,25 +45,6 @@
 #
 # @option support_urls [String] supported_platforms
 #   Link to the supported platforms for the relevant Zend product
-#
-# @example Without parameters
-#   include zend_common::repo
-#
-# @example With product other than ZendPHP
-#   class { 'zend_common::repo':
-#     product      => 'ZendHQ',
-#     support_urls => {
-#       supported_platforms => 'https://help.zend.com/zendphp/current/content/installation/zendhq_supported_platforms.htm',
-#     },
-#   }
-#
-# @example With credentials
-#   class { 'zend_common::repo':
-#     creds => {
-#       username => '<ZEND_USERNAME>',
-#       password => '<ZEND_PASSWORD>',
-#     }
-#   }
 #
 class zend_common::repo (
   Enum['ZendPHP', 'ZendHQ'] $product = 'ZendPHP',
