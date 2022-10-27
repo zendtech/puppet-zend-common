@@ -19,10 +19,10 @@
 #     }
 #   }
 #
-# @param [Enum['ZendPHP', 'ZendHQ']] product
+# @param product
 #   Name of the Zend product
 #
-# @param [Optional[Hash]] creds
+# @param creds
 #   ZendPHP repo credentials
 #
 # @option creds [String] username
@@ -31,7 +31,7 @@
 # @option creds [String] password
 #   ZendPHP repo password
 #
-# @param [Hash] key
+# @param key
 #   ZendPHP repo key
 #
 # @option key [String] id
@@ -40,7 +40,7 @@
 # @option key [String] source
 #   ZendPHP repo key source URL
 #
-# @param [Hash] support_urls
+# @param support_urls
 #   Links to relevant Zend product documentation
 #
 # @option support_urls [String] supported_platforms
