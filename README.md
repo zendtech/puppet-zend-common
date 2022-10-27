@@ -6,9 +6,8 @@ require the ZendPHP repositories and sometimes a license.
 ## Table of Contents
 
 1. [What zend_common affects](#what-zend_common-affects)
-1. [Usage - Configuration options and additional functionality](#usage)
-1. [Limitations - OS compatibility, etc.](#limitations)
-1. [Development - Guide for contributing to the module](#development)
+1. [Usage](#usage)
+1. [Reference](#reference)
 
 ## What zend_common affects
 
