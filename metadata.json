@@ -1,6 +1,6 @@
 {
   "name": "zend-zend_common",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Zend by Perforce",
   "summary": "Contains shared code for ZendPHP add-on modules.",
   "license": "MIT",
