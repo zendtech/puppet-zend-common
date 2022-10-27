@@ -5,10 +5,8 @@ require 'spec_helper'
 describe 'zend_common::license' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
-      let(:facts) { os_facts }
-
       file_uri = 'puppet:///modules/test_module/licenses/test-license'
-
+      let(:facts) { os_facts }
       let(:params) { { source: file_uri } }
 
       it { is_expected.to compile }
