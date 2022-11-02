@@ -60,12 +60,10 @@ class zend_common::repo (
   $release     = 'zendphp'
   $baseurl     = 'repos.zend.com'
   $repos       = 'non-free'
-  # lint:ignore:manifest_whitespace_closing_bracket_after
   $unsupported = @("MESSAGE"/L)
     ${product} does not support ${facts['os']['name']} ${$facts['os']['release']['major']}; \
     see ${support_urls['supported_platforms']} for more information\
     | MESSAGE
-  # lint:endignore
 
   case $facts['os']['family'] {
     'Debian': {
