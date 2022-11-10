@@ -10,10 +10,22 @@
 # @param source
 #   Source path or puppet URL to license file
 #
+# @param content
+#   Contents of the license file
+#
 class zend_common::license (
-  String[1] $source,
+  String $content = '',
+  String $source = '',
 ) {
-  file { '/opt/zend/zendphp/etc/license':
-    source => $source,
+  if $content != '' {
+    file { '/opt/zend/zendphp/etc/license':
+      content => $content,
+    }
+  }
+  else {
+    file { '/opt/zend/zendphp/etc/license':
+      source => $source,
+    }
   }
 }
+
