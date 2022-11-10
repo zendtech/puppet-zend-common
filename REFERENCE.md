@@ -26,12 +26,27 @@ class { 'zend_common::license':
   subscribe => Class['zendhq::package'],
 }
 ```
+```puppet
+$license = Deferred('vault_lookup::lookup',["licenses/zendhq"], 'https://vault.server.lcl:8200',)
+class { 'zend_common::license':
+  content    => $license,
+}
+```
 
 #### Parameters
 
 The following parameters are available in the `zend_common::license` class:
 
-* [`source`](#-zend_common--license--source)
+
+* Optional [`content`](#-zend_common--license--content)
+
+##### <a name="-zend_common--license--content"></a>`source`
+
+Data type: `String[10]`
+
+The contents (text) of the license file. If this parameter is specified, the parameter `source` will be ignored.
+
+* Optional [`source`](#-zend_common--license--source)
 
 ##### <a name="-zend_common--license--source"></a>`source`
 
