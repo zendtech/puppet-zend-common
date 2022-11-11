@@ -32,9 +32,6 @@ class zend_common::license (
       source => $source,
     }
   } else {
-    notify { 'no license':
-      message  => 'Neither "content", nor "source" of the license file have been specified. License file has not been updated.',
-      loglevel => 'warning',
-    }
+    fail("'source' or 'content' must be defined")
   }
 }
