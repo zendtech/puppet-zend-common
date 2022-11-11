@@ -17,7 +17,7 @@ Upload a Zend product license to the proper directory
 
 #### Examples
 
-##### 
+##### With license URL
 
 ```puppet
 class { 'zend_common::license':
@@ -26,6 +26,9 @@ class { 'zend_common::license':
   subscribe => Class['zendhq::package'],
 }
 ```
+
+##### With license text
+
 ```puppet
 $license = Deferred('vault_lookup::lookup',["licenses/zendhq"], 'https://vault.server.lcl:8200',)
 class { 'zend_common::license':
@@ -37,22 +40,24 @@ class { 'zend_common::license':
 
 The following parameters are available in the `zend_common::license` class:
 
-
-* Optional [`content`](#-zend_common--license--content)
-
-##### <a name="-zend_common--license--content"></a>`source`
-
-Data type: `String[10]`
-
-The contents (text) of the license file. If this parameter is specified, the parameter `source` will be ignored.
-
-* Optional [`source`](#-zend_common--license--source)
+* [`source`](#-zend_common--license--source)
+* [`content`](#-zend_common--license--content)
 
 ##### <a name="-zend_common--license--source"></a>`source`
 
-Data type: `String[1]`
+Data type: `Optional[String[1]]`
 
 Source path or puppet URL to license file
+
+Default value: `undef`
+
+##### <a name="-zend_common--license--content"></a>`content`
+
+Data type: `Optional[String[10]]`
+
+Contents of the license file
+
+Default value: `undef`
 
 ### <a name="zend_common--repo"></a>`zend_common::repo`
 
