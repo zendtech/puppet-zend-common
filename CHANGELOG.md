@@ -2,10 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## Release 0.1.0
+## [v1.0.0](https://github.com/zendtech/puppet-zend-common/tree/v1.0.0) (2022-10-26)
+
+Initial release
 
 **Features**
 
-**Bugfixes**
-
-**Known Issues**
+- Manage Zend product license
+- Manage Zend binaries repository
