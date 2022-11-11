@@ -67,7 +67,9 @@ class zend_common::repo (
 
   case $facts['os']['family'] {
     'Debian': {
-      unless $facts['os']['release']['major'] in ['9', '10', '11'] or $facts['os']['release']['major'] in ['16.04', '18.04', '20.04', '22.04'] {
+      $supported_debian = $facts['os']['release']['major'] in ['9', '10', '11']
+      $supported_ubuntu = $facts['os']['release']['major'] in ['16.04', '18.04', '20.04', '22.04']
+      unless $supported_debian or $supported_ubuntu {
         fail($unsupported)
       }
 

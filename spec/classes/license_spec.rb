@@ -9,20 +9,21 @@ describe 'zend_common::license' do
       test_content = 'test-license-content'
       let(:facts) { os_facts }
 
-
       describe 'without params' do
-        it { is_expected.to compile.and_raise_error(/.*/) }
+        it { is_expected.to compile.and_raise_error(%r{/.*/}) }
       end
 
       describe 'with Puppet URL for source' do
         let(:params) { { source: file_uri } }
+
         it { is_expected.to compile }
         it { is_expected.to contain_class('zend_common::license').with_source(file_uri) }
         it { is_expected.to contain_file('/opt/zend/zendphp/etc/license').with_source(file_uri) }
       end
-      
+
       describe 'with text for content' do
         let(:params) { { content: test_content } }
+
         it { is_expected.to compile }
         it { is_expected.to contain_class('zend_common::license').with_content(test_content) }
         it { is_expected.to contain_file('/opt/zend/zendphp/etc/license').with_content(test_content) }
