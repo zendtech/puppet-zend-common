@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.1](https://github.com/zendtech/puppet-zend-common/tree/v1.1.1) (2022-12-14)
+
+**Bugfix**
+
+- Bump version of puppetlabs/apt to sync with other modules
+
 ## [v1.1.0](https://github.com/zendtech/puppet-zend-common/tree/v1.1.0) (2022-11-11)
 
 **Enhancements**
