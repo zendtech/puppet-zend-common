@@ -20,7 +20,7 @@
 #   Contents of the license file
 #
 class zend_common::license (
-  Optional[String[10]] $content = undef,
+  Optional[String[1]] $content = undef,
   Optional[String[1]]  $source  = undef,
 ) {
   if $content {
