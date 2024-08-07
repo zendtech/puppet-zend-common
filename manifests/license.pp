@@ -21,7 +21,7 @@
 #
 class zend_common::license (
   Optional[String[1]] $content = undef,
-  Optional[String[1]]  $source  = undef,
+  Optional[String[1]] $source  = undef,
 ) {
   if $content {
     file { '/opt/zend/zendphp/etc/license':
