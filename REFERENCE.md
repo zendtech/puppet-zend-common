@@ -53,7 +53,7 @@ Default value: `undef`
 
 ##### <a name="-zend_common--license--content"></a>`content`
 
-Data type: `Optional[String[10]]`
+Data type: `Optional[String[1]]`
 
 Contents of the license file
 
@@ -138,9 +138,9 @@ Default value:
 
 ```puppet
 {
-  id     => '799058698E65316A2E7A4FF42EAE1437F7D2C623',
-  source => 'https://repos.zend.com/zend.key',
-}
+    id     => '799058698E65316A2E7A4FF42EAE1437F7D2C623',
+    source => 'https://repos.zend.com/zend.key',
+  }
 ```
 
 ##### <a name="-zend_common--repo--support_urls"></a>`support_urls`
@@ -157,7 +157,7 @@ Default value:
 
 ```puppet
 {
-  supported_platforms => 'https://help.zend.com/zendphp/current/content/introduction/supported_platforms.htm',
-}
+    supported_platforms => 'https://help.zend.com/zendphp/current/content/introduction/supported_platforms.htm',
+  }
 ```
 
